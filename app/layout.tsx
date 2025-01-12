@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ConnectToDatabase } from "@/DataBase/database.connect";
+import type { Metadata } from "next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,11 +23,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  ConnectToDatabase();
   return (
     <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        >
         {children}
       </body>
     </html>
