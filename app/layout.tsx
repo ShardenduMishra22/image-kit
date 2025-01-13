@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { ConnectToDatabase } from "@/DataBase/database.connect";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -18,12 +17,11 @@ export const metadata: Metadata = {
   description: "Created By Shardendu Mishra using Next.js",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  ConnectToDatabase();
   return (
     <html lang="en" className="dark">
       <body
