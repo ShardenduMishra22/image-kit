@@ -44,6 +44,8 @@
     "cmdk": "^1.0.0",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.5.2",
+    "imagekit": "^6.0.0",
+    "imagekitio-next": "^1.0.1",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.471.0",
     "mongoose": "^8.9.4",
